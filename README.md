@@ -4,6 +4,8 @@ Hello! This is the repository where I am learning ROS/ROS2.
 
 P.S.: I am using MacOS, which adds a bit of complexity to installing ROS. Therefore, I've created a `docker-compose` setup that simplifies the process. The current `src` folder is mapped to the home directory within the ROS Docker container, making it easy to write code in the code editor of your choice.
 
+</br>
+
 ## Getting started
 1. Starting the container
 ```python
@@ -22,7 +24,7 @@ ros2 run demo_nodes_cpp talker
 ------ 
 ## ROS functionality 
 
-- __Creating node__: update the `src` folder with your node and run the following lines within the ros docker container. It will update `build`, `install`, and `log` folders with current node build. 
+- __Creating a Node__: Update the src folder with your node and run the following commands within the ROS Docker container. This will update the build, install, and log folders with the current node build.
 
     ```python
     colcon build --symlink-install
