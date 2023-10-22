@@ -1,0 +1,25 @@
+services:
+  ros2:
+    container_name: ros2
+    entrypoint: tail -f /dev/null
+    image: osrf/ros:humble-desktop
+    ports:
+      - 8765:8765
+    environment:
+      - DISPLAY=novnc:0.0
+    working_dir: /home/
+    network_mode: ros
+    volumes:
+      - /Users/bogdanivanyuk/Desktop/ROS:/home/
+
+
+  novnc:
+    container_name: novnc
+    image: theasp/novnc:latest
+    network_mode: ros
+    ports:
+      - 8080:8080
+    environment:
+      - DISPLAY_WIDTH=3000
+      - DISPLAY_HEIGHT=1800
+      - RUN_XTERM=no
