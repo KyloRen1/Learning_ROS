@@ -32,3 +32,14 @@ ros2 run demo_nodes_cpp talker
     # after node is created update the source
     source install/setup.sh
     ```
+
+- __Creating topic publisher__: same as creating Node, but requires adding
+    ```python
+    # creating publisher 
+    self.cmd_vel_pub = self.create_publisher(
+        msg_type=Twist,
+        topic="/turtle1/cmd_vel", 
+        qos_profile=10, # queue size
+    )
+    ```
+    and corresponding messages to send

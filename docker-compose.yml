@@ -10,7 +10,7 @@ services:
     working_dir: /home/
     network_mode: ros
     volumes:
-      - /Users/bogdanivanyuk/Desktop/ROS:/home/
+      - /Users/bogdanivanyuk/Desktop/Learning_ROS:/home/
 
 
   novnc:
